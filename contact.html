@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Rizvic Edin</title>
+	<meta name="description" content="">
+	<meta name="author" content="rizva">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+	<link rel="stylesheet" href="styles/css/style.css">
+
+
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+		<div id="header">
+
+			<div id="profile">
+				<img id="framephoto" src="images/rsz_framephoto.jpg">
+				<img id="profilephoto" src="images/rsz_profile.jpg">
+			</div>
+
+
+
+			<div class="nav">
+
+				<ul>
+					<li class="about"><a href="about.html">Home</a></li>
+					<li class="gallery"><a href="profil.html">Gallery</a></li>
+
+					<li class="myblog"><a href="blog.html">About</a></li>
+					<li class="contact"><a href="contact.html">Contact Me</a></li>
+				</ul>
+
+			</div>
+			<a href="index.html"><img id="imglogo" src="images/Drawing 1.png"></a>
+		</div>
+
+		<!--</div> -->
+
+
+		<div id="container">
+			
+			<div id="formstatus"></div>
+			<div id="wrap">
+				<h1 id="contactheader">Drop me a Message!</h1>
+
+
+				<form id="contact-form" >
+
+
+					<p class="formtext">Hello User,</p>
+					<label for="message">YOUR MESSAGE : </label>
+					<textarea name="message" value="Your Message" id="message" cols="80" rows="6" placeholder="Type in your message"></textarea>
+					<p class="formtext">Best,</p>
+					<label for="name">NAME:</label>&nbsp;
+					<input type="text" name="name" value="" id="name" /><br />
+					<label for="email">EMAIL:</label>&nbsp;
+					<input type="text" name="email" value="" id="email" /><br /><br />
+					<div><input type="button" name="button"  value="OK I want to send it now, thanks!" class="btn" /></div>
+				</form>
+
+			</div>
+
+			
+
+
+
+		</div>
+
+		<footer>
+			<p>&copy; Copyright by rizva</p>
+		</footer>
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<!-- Contact Form -->
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var ta = "";
+		var name = "";
+		var email = "";
+		var re_name = /^[a-z0-9]+$/i;
+		var re_email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		
+		$("#formstatus").html("<p>Please fill out the form</p>");
+		$(".btn").click(function(){
+			if($("#message").val()=="" || $("#name").val()=="" || $("#email").val()==""){
+				$("#formstatus").html('<p style="color:red;">You have to fill out all the fields</p>');
+			}
+			else{
+				$("#formstatus").html('<p style="color:green;">Thank you for your comment '+ name +'<br/>'+ email +'<br/><br/>'+ ta +'</p>');
+			}
+		
+		});
+		$("#message").focus(function(){
+		if($(this).val()==""){
+			$(this).css("border","2px solid red");
+			$(this).css( "box-shadow","0 0 10px #ff3333");
+			$(this).css( "outline","0 none");
+			
+		}
+			$(this).keyup(function(){
+				if($(this).val()!=""){
+					$(this).css("border","2px solid green");
+					$(this).css( "box-shadow","0 0 10px  #66ff66");
+					$(this).css( "outline","0 none");
+					ta = $(this).val();
+					
+				}else{
+					$(this).css("border","2px solid red");
+					$(this).css( "box-shadow","0 0 10px #ff3333");
+					$(this).css( "outline","0 none");
+				}
+			});
+		});
+			$("#message").blur(function(){
+			if($(this).val()==""){
+				$(this).css("border","");
+				$(this).css( "box-shadow","");
+				$(this).css( "outline","0 none");
+			}
+	
+		});
+		
+			$("#name").focus(function(){
+			if($(this).val() ==""){
+				$(this).css("border","2px solid red");
+				$(this).css( "box-shadow","0 0 10px #ff3333");
+				$(this).css( "outline","0 none");
+				
+			}
+			$(this).keyup(function(){
+				if($(this).val() =="" || re_name.test($(this).val()) == false){   //re_name.test($(this).val()) == true
+					$(this).css("border","2px solid red");
+					$(this).css( "box-shadow","0 0 10px #ff3333");
+					$(this).css( "outline","0 none");
+					$("#formstatus").html('<p style="color:red;">Name should be consisted out of numbers and characters only</p>');
+				
+				}else{
+				
+					$(this).css("border","2px solid green");
+					$(this).css( "box-shadow","0 0 10px #66ff66");
+					$(this).css( "outline","0 none");
+					name = $(this).val();
+					$("#formstatus").html('<p style="color:green;">Provided name is valid</p>');
+
+				}
+			});
+		});
+			$("#name").blur(function(){
+			if($(this).val() ==""){
+				$(this).css("border","");
+				$(this).css( "box-shadow","");
+				$(this).css( "outline","0 none");
+				$("#formstatus").html('');
+			}
+		
+		});
+			$("#email").focus(function(){
+			if($(this).val()==""){
+				$(this).css("border","2px solid red");
+				$(this).css( "box-shadow","0 0 10px #ff3333");
+				$(this).css( "outline","0 none");
+				
+			}
+			$(this).keyup(function(){
+				if($(this).val()=="" || re_email.test($(this).val()) == false){
+					$(this).css("border","2px solid red");
+					$(this).css( "box-shadow","0 0 10px #ff3333");
+					$(this).css( "outline","0 none");
+					$("#formstatus").html('<p style="color:red;">Provide an email in appropriate format</p>');
+
+				}else{
+				
+					$(this).css("border","2px solid green");
+					$(this).css( "box-shadow","0 0 10px #66ff66");
+					$(this).css( "outline","0 none");
+					email = $(this).val();
+					$("#formstatus").html('<p style="color:green;">Email is valid</p>');
+
+				}
+			});
+		});
+			$("#email").blur(function(){
+			if($(this).val()==""){
+				$(this).css("border","");
+				$(this).css( "box-shadow","");
+				$(this).css( "outline","0 none");
+				$("#formstatus").html('');
+			}
+		
+		}); 
+
+
+	});
+
+	</script>
+</body>
+
+</html>

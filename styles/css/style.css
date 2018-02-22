@@ -1,0 +1,464 @@
+.piledpages {
+	background: url('../../images/bench_the_autumn_forest-1920x1200.jpg');
+	margin: 0 auto;
+	padding: 0;
+	background-size: cover;
+	font-size: 20px;
+}
+
+body {
+	background: url("../../images/bench_the_autumn_forest-1920x1200.jpg");
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	padding: 0;
+	font-size: 20px;
+}
+
+#wrapper {
+	margin: 0 auto;
+	width: 1024px;
+}
+
+@font-face {
+	font-family: grandStylus;
+	src: url("../fonts/Grand Stylus.ttf");
+}
+
+@font-face {
+	font-family: ancient;
+	src: url("../fonts/AuldMagick.ttf");
+}
+
+#overlayDiv {
+	margin: 0 auto;
+}
+
+#overlaytop {
+	z-index: 100;
+	position: absolute;
+}
+
+#overlaywrrap {
+	position: absolute;
+}
+
+#overlay1 {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	z-index: 99;
+}
+
+#overlay2 {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 50%;
+	height: 100%;
+	z-index: 99;
+}
+
+.buttons {
+	position: absolute;
+	position: fixed;
+	top: 10px;
+	right: 5px;
+}
+
+#up {
+	background: #1ceb11;
+	background-image: -webkit-linear-gradient(top, #1ceb11, #2bb85c);
+	background-image: -moz-linear-gradient(top, #1ceb11, #2bb85c);
+	background-image: -ms-linear-gradient(top, #1ceb11, #2bb85c);
+	background-image: -o-linear-gradient(top, #1ceb11, #2bb85c);
+	background-image: linear-gradient(to bottom, #1ceb11, #2bb85c);
+	-webkit-border-radius: 24;
+	-moz-border-radius: 24;
+	border-radius: 24px;
+	text-shadow: 1px 1px 5px #666666;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 14px;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+}
+
+#up:hover {
+	background: #db9418;
+	background-image: -webkit-linear-gradient(top, #db9418, #eba01e);
+	background-image: -moz-linear-gradient(top, #db9418, #eba01e);
+	background-image: -ms-linear-gradient(top, #db9418, #eba01e);
+	background-image: -o-linear-gradient(top, #db9418, #eba01e);
+	background-image: linear-gradient(to bottom, #db9418, #eba01e);
+	text-decoration: none;
+}
+
+#down {
+	background: #1ceb11;
+	background-image: -webkit-linear-gradient(top, #1ceb11, #2bb85c);
+	background-image: -moz-linear-gradient(top, #1ceb11, #2bb85c);
+	background-image: -ms-linear-gradient(top, #1ceb11, #2bb85c);
+	background-image: -o-linear-gradient(top, #1ceb11, #2bb85c);
+	background-image: linear-gradient(to bottom, #1ceb11, #2bb85c);
+	-webkit-border-radius: 24;
+	-moz-border-radius: 24;
+	border-radius: 24px;
+	text-shadow: 1px 1px 5px #666666;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 14px;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+}
+
+#down:hover {
+	background: #db9418;
+	background-image: -webkit-linear-gradient(top, #db9418, #eba01e);
+	background-image: -moz-linear-gradient(top, #db9418, #eba01e);
+	background-image: -ms-linear-gradient(top, #db9418, #eba01e);
+	background-image: -o-linear-gradient(top, #db9418, #eba01e);
+	background-image: linear-gradient(to bottom, #db9418, #eba01e);
+	text-decoration: none;
+}
+
+
+/**********************************Header styling****************************************/
+
+#header {
+	width: 100%;
+	background-image: url("../../images/beech-wood-grain-texture-background-header.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin-top: -20px;
+	height: 130px;
+	margin: 0 auto;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	box-shadow: 5px 0 5px -5px #000000;
+}
+
+#profile {
+	padding: 10px 15px 10px 45px;
+	width: 19%;
+	height: 112px;
+	float: left;
+	margin: 0 auto;
+}
+
+#profilephoto {
+	z-index: 1;
+	position: relative;
+	top: -11px;
+	left: -82px;
+}
+
+#imglogo {
+	padding-top: 15px;
+	position: relative;
+	z-index: 2;
+	top: -58px;
+	left: 220px;
+}
+
+#imglogo:hover {
+	padding-top: 40px;
+	border-bottom: 5px solid #888;
+	border-radius: 85px;
+}
+
+.nav {
+	height: 120px;
+	width: 69%;
+	float: right;
+}
+
+.nav ul {
+	list-style: none;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+.nav li {
+	font-family: grandStylus;
+	line-height: 0px;
+	border-bottom: 1px solid #888;
+	padding: 40px 15px 0 15px;
+}
+
+.nav a {
+	text-decoration: none;
+	color: #0F1D21;
+	display: block;
+	transition: .3s background-color;
+}
+
+.nav a:hover {
+	background-color: #994d00;
+	border-radius: 5px;
+	color: #FFFFFF;
+}
+
+.nav a.active {
+	background-color: #fff;
+	color: #444;
+	cursor: default;
+}
+
+@media screen and (min-width: 600px) {
+	.nav li {
+		width: 120px;
+		border-bottom: none;
+		height: 50px;
+		line-height: 50px;
+		font-size: 1.4em;
+	}
+	/* Option 1 - Display Inline */
+	.nav li {
+		display: inline-block;
+		margin-right: -4px;
+	}
+}
+
+
+/**********************************Page styling****************************************/
+
+#container {
+	background: url("../../images/Paper.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	border-radius: 10px;
+	height: 540px;
+	margin-top: 10px;
+	margin-bottom: -10px;
+	box-shadow: 5px 0 5px -5px #000000;
+}
+
+#frame {
+	position: absolute;
+	width: 800px;
+	height: 500px;
+	background: url("../../images/frame1.jpg");
+	;
+	top: 99px;
+	left: 107px;
+	border-radius: 15px;
+}
+
+#container_gallery {
+	border-radius: 10px;
+	height: 630px;
+	margin-top: 10px;
+	margin-bottom: -10px;
+	position: relative;
+	max-width: 920px;
+	width: 100%;
+	padding: 0 50px;
+	margin: 0 auto;
+}
+
+#content {
+	padding: 20px 130px;
+	font-family: ancient;
+	font-size: 35px;
+}
+
+#contentblog {
+	padding: 20px 25px 20px 0px;
+	font-family: ancient;
+	font-size: 35px;
+}
+
+#showcontent {
+	font-weight: bold;
+}
+
+#content_gallery {}
+
+
+/**********************************   TABS    ****************************************/
+
+.tabs {
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+}
+
+#divtabul {
+	width: 30%;
+	height: 500px;
+	padding-right: 15px;
+}
+
+#page_navigation {
+	text-align: center;
+	position: relative;
+	top: -20px;
+	left: 20px;
+}
+
+#page_navigation a {
+	text-decoration: none;
+	color: #1F6610;
+}
+
+#page_navigation a:hover {
+	color: #000000;
+}
+
+
+/*----- Tab Links -----*/
+
+
+/* Clearfix */
+
+.tab-links:after {}
+
+.tab-links {}
+
+.tab-links li {
+	background: url("../../images/plank.jpg");
+	background-repeat: no-repeat;
+	text-align: center;
+	text-decoration: none;
+	list-style-type: none;
+	border-radius: 10px;
+}
+
+.tab-links li:hover {
+	background: url("../../images/plankdark.jpg");
+}
+
+.tab-links a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.tab-links a:hover {
+	color: #000000;
+}
+
+li.active a,
+li.active a:hover {}
+
+
+/*----- Content of Tabs -----*/
+
+.tab-content {
+	text-align: center;
+	max-height: 400px;
+	width: 68%;
+}
+
+.tab {
+	display: none;
+}
+
+.tab.active {
+	display: block;
+}
+
+
+/*------------------Contact Form------------*/
+
+#wrap {
+	width: 530px;
+	margin: -20px 20px 5px 10px;
+	float: left;
+	height: 500px;
+}
+
+h1 {
+	margin-bottom: -150px;
+	text-align: center;
+	font-size: 38px;
+	text-shadow: 0 1px 0 #ede8d9;
+}
+
+#contactheader {
+	text-align: center;
+	font-family: grandStylus;
+	font-size: 30px;
+}
+
+#contact-form {
+	position:relative;	
+	overflow: hidden;
+	top: 150px;
+	font-family: grandStylus;
+	background: url("../../images/beech-wood-grain-texture-background-header.jpg");
+	height: 380px;
+	width: 400px;
+	margin: 0px auto;
+	padding: 30px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 27px #fff;
+	-moz-box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 14px #fff;
+	-webkit-box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 27px #fff;
+}
+#contact-form >input[type="text"],input[type="email"] {
+	width:330px;
+	height:20px;	
+	float:right;
+	background: #f7e3b7;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+#contact-form >input,textarea {
+	border-radius: 5px;
+	
+}
+#contact-form >div {
+	width:100%;
+	text-align:center;
+}
+
+#contact-form >textarea{
+	width:100%;
+	resize:none;
+	float:right;
+	background: #f7e3b7;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.formtext {
+	font-size: 26px;
+	color: #000000;
+	margin: 0;
+	padding: 0;
+}
+
+#formstatus {
+	width:350px;
+	float:right;
+	text-align:center;
+	height:380px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	margin:150px 50px 0px 50px;
+	
+}
+#formstatus > p {
+	font-size: 18px;
+}
+
+
+
+/*-----------------------Footer----------------*/
+
+footer {
+	background: url("../../images/beech-wood-grain-texture-background-header.jpg");
+	height: 50px;
+	text-align: right;
+	border-radius: 10px;
+	box-shadow: 5px 0 5px -5px #000000;
+}
+
+footer p {
+	padding-right: 30px;
+	padding-top: 10px;
+}
